@@ -1,0 +1,21 @@
+.container {
+ 
+    margin-top: 50px;
+}
+.card {
+    background-color: bisque;
+    /* width: 30%; */
+}
+label {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: chocolate;
+    font-size: small;
+    
+}
+
+input.ng-invalid:focus {
+    outline-color: red;
+  }
+  #search{
+    margin-left: 300px;
+  }

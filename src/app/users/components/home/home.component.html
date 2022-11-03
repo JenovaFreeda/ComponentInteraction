@@ -1,0 +1,25 @@
+<app-common [data]="value"></app-common>
+<div  class="mt-3" style="text-align: right;">
+    <button class="btn btn-primary" (click)="admin()">Admin</button>
+</div>
+<pre></pre>
+<div class="col-md-8 offset-2">
+<table class="table table-bordered">
+    <thead>
+        <tr class="table-success" style="text-align: center;">
+            <th>ID</th>
+            <th>NAME</th>
+            <th>USERNAME</th>
+            <th>EMAIL</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data" style="text-align: center;">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.username }}</td>
+            <td>{{ item.email }}</td>
+            <td><button class="btn btn-primary newbutton" (click)="edit(item)">Edit</button></td>
+</tr></tbody></table>
+        </div>

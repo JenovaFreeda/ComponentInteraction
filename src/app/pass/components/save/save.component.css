@@ -1,0 +1,14 @@
+.container {
+    
+    margin-top: 50px;
+}
+.card {
+    background-color: bisque;
+    
+}
+label {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: chocolate;
+    font-size: small;
+    
+}

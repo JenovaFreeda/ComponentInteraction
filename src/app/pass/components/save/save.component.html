@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="col-md-6 offset-3">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="editForm">
+                <div class="form-group mt-3">
+                    <label for="id">Id</label><br>
+                    <input [class.is-invalid]="editForm.get('id')?.invalid && editForm.get('id')?.touched" type="text" name="id" class="form-control" formControlName="id" [(ngModel)]="value.id">
+                    
+                    <div *ngIf="editForm.get('id')?.invalid && editForm.get('id')?.touched">
+                       <small class="text-danger" *ngIf="editForm.get('id')?.errors?.['required']">Id is required*</small>
+                       <small class="text-danger" *ngIf="editForm.get('id')?.errors?.['pattern']">Id must contain only numbers*</small>
+                    </div>
+
+                </div>
+                <div class="form-group mt-3">
+                    <label for="name">Name</label><br>
+                    <input [class.is-invalid]="editForm.get('name')?.invalid && editForm.get('name')?.touched" type="text" name="name" class="form-control" formControlName="name" [(ngModel)]="value.firstName">
+                    
+                    <div *ngIf="editForm.get('name')?.invalid && editForm.get('name')?.touched">
+                        <small class="text-danger" *ngIf="editForm.get('name')?.errors?.['required']">Name is required*</small>
+                        <small class="text-danger" *ngIf="editForm.get('name')?.errors?.['pattern']">Name must contain only alphabets*</small>
+                     </div>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="mail">Email</label><br>
+                    <input [class.is-invalid]="editForm.get('email')?.invalid && editForm.get('email')?.touched" type="text" name="mail" class="form-control" formControlName="email" [(ngModel)]="value.email">
+                    
+                    <div *ngIf="editForm.get('email')?.invalid && editForm.get('email')?.touched">
+                        <small class="text-danger" *ngIf="editForm.get('email')?.errors?.['required']">Email is required*</small>
+                        <small class="text-danger" *ngIf="editForm.get('email')?.errors?.['email']">Enter a valid email*</small>
+                     </div>
+                </div>
+                <div class="form-group mt-3">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
